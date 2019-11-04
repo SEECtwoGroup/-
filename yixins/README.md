@@ -1,4 +1,4 @@
-# yixins
+# yixin
 
 > A Vue.js project
 
