@@ -6,6 +6,7 @@ import index from '@/view/index'
 import cart from '@/view/cart'
 import course from '@/view/course'
 import my from '@/view/my'
+import deta from '@/mao/details'
 
 Vue.use(Router)
 
@@ -37,7 +38,13 @@ export default new Router({
     			path:'my',
 		    	name:'my',
 		    	component:my
+    		},{
+    			path:'deta',
+		    	name:'deta',
+		    	component:deta
     		}
+    			
+    		
     	]
     }
   ]
