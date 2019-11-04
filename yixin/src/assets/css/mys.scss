@@ -1,0 +1,62 @@
+@import '@/assets/css/rem.scss';
+*{
+	margin:0;
+	padding:0;
+}
+li{
+    list-style: none;
+}
+.box{
+	transition:0.3s;
+	position: fixed;
+	top:0;
+	left:100vw;
+	width:100vw;
+	height:100vh;
+	background: #f4f4f4;
+	.title{
+		background: #fff;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-top:rem(30);
+		padding-left:rem(33);
+		.name{
+			margin-left:rem(240);
+		}
+	}
+	.tabbar{
+		background: #fff;
+		display: flex;
+		justify-content: space-around;
+		color:#999;
+		height:rem(100);
+		line-height:rem(100);
+		.active{
+			color:#ee7f31;
+		}
+	}
+	.btm{
+	    .btmShow{
+	        color:#666;
+            text-align: center;
+            margin-top:rem(300);
+	    }
+	    .btm-list{
+	        li{
+	            display: flex;
+	            flex-flow: column;
+	            padding-left:rem(30);
+	            padding-bottom:rem(20);
+	            background:#fff;
+	            border-bottom:rem(1) solid skyblue;
+	            p{
+	                margin-top:rem(20);
+	            }
+	            .list-name{
+	                
+	            }
+	        }
+	    }
+	}
+}
