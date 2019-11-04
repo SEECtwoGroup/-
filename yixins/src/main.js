@@ -13,18 +13,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import btmtabbar from '@/page/bottomTabbar'
 import '@/assets/icon/iconfont.css'
-import qOrder from '@/page/qOrder'
-import qreservation from '@/page/qReservation'
-import coupon from '@/page/qcoupon'
-import bargain from '@/page/qbargain'
-import group from '@/page/qgroup'
-import qaddress from '@/page/qaddress'
-import qaddaddress from '@/page/qAddAddress'
+import { Swipe, SwipeItem } from 'mint-ui';
 
-
-
-
-
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name,SwipeItem);
 Vue.use(load,{
 	error:'@/assets/logo.png',//加载失败图片
 	loading:'@/assets/logo.png',//加载图片
@@ -36,17 +28,10 @@ Vue.use(Mint)
 Vue.use(ElementUI)
 
 
+
 Vue.config.productionTip = false
 
-
 Vue.component('btmtabbar',btmtabbar)
-Vue.component('qOrder',qOrder)
-Vue.component('qreservation',qreservation)
-Vue.component('coupon',coupon)
-Vue.component('bargain',bargain)
-Vue.component('group',group)
-Vue.component('qaddress',qaddress)
-Vue.component('qaddaddress',qaddaddress)
 
 
 
