@@ -136,16 +136,12 @@
 						this.liisdata.push(this.aster[a])
 					}
 				}
-//				for(var i=0;i<this.arrt.length;i++){
-//					
-//
-//				}
 			}
 		}
 	}
 	
 </script>
-<style lang="scss">
+<style scoped="" lang="scss">
 	@import '@/assets/css/rem.scss';
 	body{
 		background: rgb(217,217,217);

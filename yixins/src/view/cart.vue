@@ -118,7 +118,7 @@
 		}
 	}
 </script>
-<style lang="scss">
+<style scoped="" lang="scss">
 	@import '@/assets/css/rem.scss';
 	ul,li{
 		list-style: none;

@@ -11,7 +11,7 @@
 			<div class="btmShow" v-if="!arr.length>0">暂无数据</div>
 			<ul class="btm-list" v-else="">
 				<li v-for="item in arr">
-					<p class="list-name">{{item.title}}</p>
+					<p class="list-name">{{item.name}}</p>
 					<p class="list-count">{{item.count}}</p>
 				</li>
 			</ul>

@@ -10,7 +10,7 @@
 				<p><i v-show="defaultIndex == index" class="iconfont icon-duigouxuanzhong"></i></p>
 				<div>
 					<p>{{item.name}}</p>
-					<span>{{item.address}}</span>
+					<span>{{item.areas}}</span>
 				</div>
 				<i class="iconfont icon-biao"></i>
 			</li>
@@ -39,7 +39,15 @@
 				defaultIndex:0
 			}
 		},
+		mounted(){
+			this.getData()
+		},
 		methods:{
+			getData(){
+				this.axios.get('/a/address/').then(res=>{
+					this.arr = res.data.listArr;
+				})
+			},
 			onPack(){
 				this.$parent.flag5Fn();
 			},

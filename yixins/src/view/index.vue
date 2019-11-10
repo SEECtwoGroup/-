@@ -2,12 +2,12 @@
 	<div>
 		<div class="index">
 			<mt-swipe class='swiper' :auto="4000">
-				<mt-swipe-item class="huadong" v-for="(item,index) in swipimg">
+				<mt-swipe-item class="huadong" v-for="(item,index) in swipimg" :key="index">
 					<img :src="item" :key="index"/>
 				</mt-swipe-item>
 			</mt-swipe>
 			<ul class='list'>
-				<li v-for="(item,index) in tai" @click="gouhop(index)">
+				<li v-for="(item,index) in tai"  :key="index" @click="gouhop(index)">
 					<img :src="item.imgs" alt="" /><span>{{item.name}}</span>
 				</li>
 			</ul>
@@ -39,7 +39,7 @@
 					</li>
 					<li class='biao-two'>
 						<i class='iconfont icon-qita'></i>
-						<span v-for="item in wifi">{{item}}</span>
+						<span v-for="item,index in wifi" :key="index">{{item}}</span>
 					</li>
 					<li class='biao-one'>
 						<i class='iconfont icon-biao'></i><span>艺欣艺术</span>

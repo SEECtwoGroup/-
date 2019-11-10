@@ -92,63 +92,20 @@
 				flag3:false,
 				flag4:false,
 				flag5:false,
-				aaa:[
-					{
-						title:'育儿经典!',
-						count:'10',
-						types:'0'
-					},{
-						title:'街舞!',
-						count:'6',
-						types:'2'
-					},{
-						title:'体育!',
-						count:'34',
-						types:'3'
-					},{
-						title:'篮球!',
-						count:'5',
-						types:'2'
-					},{
-						title:'舞蹈!',
-						count:'2',
-						types:'1'
-					},{
-						title:'橄榄球!',
-						count:'23',
-						types:'1'
-					}
-				],
-				pageArr:[
-					{
-						title:'育儿经典!',
-						count:'10',
-						types:'0'
-					},{
-						title:'街舞!',
-						count:'6',
-						types:'2'
-					},{
-						title:'体育!',
-						count:'34',
-						types:'3'
-					},{
-						title:'篮球!',
-						count:'5',
-						types:'2'
-					},{
-						title:'舞蹈!',
-						count:'2',
-						types:'1'
-					},{
-						title:'橄榄球!',
-						count:'23',
-						types:'1'
-					}
-				]
+				aaa:[],
+				pageArr:[]
 			}
 		},
+		mounted(){
+			this.getData();
+		},
 		methods:{
+			getData(){
+				this.axios.get('/a/dingdan/').then(res=>{
+					this.aaa = res.data.listArr;
+					this.pageArr = this.arr;
+				})
+			},
 			onFilter(index){
 				let arr = [];
 				this.aaa.forEach(item=>{
